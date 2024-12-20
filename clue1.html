@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code to Image</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    #image-container {
+      display: none;
+      margin-top: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Find and enter the Code from the very start of this adventure</h1>
+  <input type="text" id="codeInput" placeholder="Enter code here">
+  <button onclick="checkCode()">Submit</button>
+
+  <div id="image-container">
+    <img id="displayImage" src="" alt="Image will appear here">
+    <h2>Come to TV room!!!!!</h2>
+  </div>
+
+  <script>
+    function checkCode() {
+      var code = document.getElementById('codeInput').value;
+      var correctCode = '749';
+      var imageUrl = 'images/ghosts.gif';
+
+      if (code === correctCode) {
+        document.getElementById('image-container').style.display = 'block';
+        document.getElementById('displayImage').src = imageUrl;
+      } else {
+        alert('Incorrect code. Please try again!');
+        document.getElementById('image-container').style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
