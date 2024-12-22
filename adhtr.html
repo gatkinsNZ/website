@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1</title>
+    <title>Clue</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="centered-text">
         <div>
-            <h1>u</h1>
+            <a id="buttonlink" href="#" onclick="checkCode(); return false;">Click here for clue...</a>
+            <h2 id="homerimage" style="display:none">u</h2>
         </div>
     </div>
+
+    <script>
+        function checkCode() {
+            document.getElementById('buttonlink').style.display = 'none';
+            document.getElementById('homerimage').style.display = 'block';
+        }
+    </script>
 </body>
 </html>

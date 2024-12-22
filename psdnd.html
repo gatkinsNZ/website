@@ -9,8 +9,16 @@
 <body>
     <div class="centered-text">
         <div>
-            <a href="https://youtu.be/stfAFKoZhCY?si=40i9qxoHdqurCkcJ">Click here for clue...</a>
+            <a id="buttonlink" href="#" onclick="checkCode(); return false;">Click here for clue...</a>
+            <img id="homerimage" src="images/homer.gif" style="display:none"/>
         </div>
     </div>
+
+    <script>
+        function checkCode() {
+            document.getElementById('buttonlink').style.display = 'none';
+            document.getElementById('homerimage').style.display = 'block';
+        }
+      </script>
 </body>
 </html>
